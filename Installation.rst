@@ -7,7 +7,7 @@ Installation
     :local:
 
 
-
+--------
 ops-auth
 --------
 
@@ -81,8 +81,9 @@ Database
 The module expects a Table named "Role_Group" with columns "RoleId" (uniqueidentifier, not null) and "GroupName" (varchar, not null) in the given database. The Groupname is the name of a windows domain group. The RoleId is the id of a SIM/OPS role. The corresponding Role table is not used by the auth module and therefore CAN be absent.
 
 
-ops-api
--------
+------
+op-api
+------
 
 The ops-api module is a services that provides access to one or more datastores and configuration of views and actions for clients (for example the ops-webapp). Access to the data, the views and actions is determined by SIM/OPS roles. Access control for the views and actions is defined in a configuration file. Access control for the data is defined in the database.
 
@@ -124,6 +125,48 @@ IIS Modules
 The AspNetCoreModule module needs to be activated for this module.
 
 
-Database setup
-^^^^^^^^^^^^^^
+Database
+^^^^^^^^
+
+The module expects following tables and relationships:
+
+
+**Role** table:
+
+====== ===============================
+Column Type
+====== ===============================
+Id     PK, uniqueidentifier, not null
+Name   Name, varchar(1000), not null
+====== ===============================
+
+
+any number of **Item** tables: (name can be chosen arbitrarily)
+
+======== ===============================
+Column   Type
+======== ===============================
+Id       PK, uniqueidentifier, not null
+ItemType varchar(15), not null
+*+additional domain relevant columns*
+----------------------------------------
+======== ===============================
+
+
+foreach **Item** table there MUST be exactly one corresponding **Item_Role** table (name can be chosen arbitrarily), that defines a many-to-many relationship between the corresponding **Item** table and the **Role** table:
+
+======== ===========================================
+Column   Type
+======== ===========================================
+RoleId   FK Role(Id), uniqueidentifier, not null
+ItemId   FK **Item**(Id), uniqueidentifier, not null
+======== ===========================================
+
+..note:: database conventions
+  SIM (usually) uses 
+   - singular for table names (for example "Application" instead of "Applications")
+   - "Id" as the name for the PRIMARY KEY
+   - The GUID/uniqueidentifier type for the PRIMARY KEY column
+   - The names of the involved tables seperated by an underscore in a many to many relationship (for example "Computer_Role")
+   - Tablename + "Id" for FOREIGN KEYS (for example "RoleId")
 
