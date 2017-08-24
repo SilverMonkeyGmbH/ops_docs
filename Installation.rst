@@ -34,14 +34,17 @@ Installation
 
 The module needs to be installed as an IIS application for a website. The websites url needs to be known by SIM before compiling the application.
 
-======================================= ===================================
-Setting                                 Value
-======================================= ===================================
-Applicationname                         auth
-Applicationpool .NET CLR Version        v4.0.30319
-Applicationpool Managed pipeline mode   Integrated
-Authentication                          Only Windows Authentication enabled
-======================================= ===================================
++---------------------------------------+-----------------------------------------------+
+|Applicationname                        |auth                                           |
++---------------------------------------+-----------------------------------------------+
+|                |.NET CLR Version      |v4.0.30319                                     |
+|                +----------------------+-----------------------------------------------+
+|Applicationpool |Managed pipeline mode |Integrated                                     |
+|                +----------------------+-----------------------------------------------+
+|                |Identity              |Custom account with read access to the database|
++----------------+----------------------+-----------------------------------------------+
+|Authentication                         |Only anonymous authentication enabled          |
++---------------------------------------+-----------------------------------------------+
 
 
 Configuration (Web.config)
@@ -81,9 +84,9 @@ Database
 The module expects a Table named "Role_Group" with columns "RoleId" (uniqueidentifier, not null) and "GroupName" (varchar, not null) in the given database. The Groupname is the name of a windows domain group. The RoleId is the id of a SIM/OPS role. The corresponding Role table is not used by the auth module and therefore CAN be absent.
 
 
-------
-op-api
-------
+-------
+ops-api
+-------
 
 The ops-api module is a services that provides access to one or more datastores and configuration of views and actions for clients (for example the ops-webapp). Access to the data, the views and actions is determined by SIM/OPS roles. Access control for the views and actions is defined in a configuration file. Access control for the data is defined in the database.
 
@@ -122,7 +125,7 @@ The module needs to be installed as an IIS application for a website. The websit
 IIS Modules
 ^^^^^^^^^^^
 
-The AspNetCoreModule module needs to be activated for this module.
+The AspNetCoreModule module needs to be activated for this application.
 
 
 Database
@@ -170,3 +173,32 @@ ItemId   FK **Item**(Id), uniqueidentifier, not null
    - The names of the involved tables seperated by an underscore in a many to many relationship (for example "Computer_Role")
    - Tablename + "Id" for FOREIGN KEYS (for example "RoleId")
 
+
+config.json
+^^^^^^^^^^^
+
+*probably injected*
+
+--------------------
+ops-webapp / ops-web
+--------------------
+
+
+Installation
+^^^^^^^^^^^^
+
+This module is a static webpage (HTML5+javascript) that can be served from any modern webserver. When deployed to IIS (we recommend IIS 7 or higher) 
+
+The module needs to be installed as an IIS application for a website. The websites url needs to be known by SIM before compiling the application.
+
++---------------------------------------+-----------------------------------------------+
+|Applicationname                        |ops-web or ops                                 |
++---------------------------------------+-----------------------------------------------+
+|                |.NET CLR Version      |v4.0.30319                                     |
+|                +----------------------+-----------------------------------------------+
+|Applicationpool |Managed pipeline mode |Integrated                                     |
+|                +----------------------+-----------------------------------------------+
+|                |Identity              |Applicationpool Identity                       |
++----------------+----------------------+-----------------------------------------------+
+|Authentication                         |Only anonymous authentication enabled          |
++---------------------------------------+-----------------------------------------------+
