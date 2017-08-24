@@ -14,8 +14,10 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
+   Introduction
    Requirements
    Installation
+   Configuration
    Manual/index
    Changelog
    Support

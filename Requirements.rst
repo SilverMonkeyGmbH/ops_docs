@@ -1,19 +1,26 @@
+============
 Requirements
 ============
 
-.. important:: **TODO** what actually are supported systems, what are the requirements
-
-Application Server (IIS)
-----------------------------
--	Microsoft Windows Server 2012 or higher
--	Internet Information Server
--	Microsoft .NET Core 1.1
--	Microsoft .NET Framework 4.5.2
 
 
-Workplace Systems
-----------------------------
--	Microsoft Internet Explorer 8 or higher
--	Mozilla FireFox 5 or higher (Windows SSO is not supported by browser)
--	Google Chrome
+Serverside
+^^^^^^^^^^
 
++----------+---------------------------+--------------------------------------------+----------------------+------------------------+
+|Name      |  Technologie              | Operating System                           | Webserver            | .NET Framework         |
++==========+===========================+============================================+======================+========================+
+| ops-api  | ASP.NET                   | Windows 7, Windows Server 2012 (or higher) | IIS 8 (or higher)    | 4.5.2 (or higher)      |
++----------+---------------------------+--------------------------------------------+----------------------+------------------------+
+| ops-auth | ASP.NET Core              | Windows 7, Windows Server 2012 (or higher) | IIS 8 (or higher)    | 4.5.2 (or higher)      |
++----------+---------------------------+--------------------------------------------+----------------------+------------------------+
+| ops-web  | static webpage (HTML5/JS) | any modern OS                              | any modern webserver | not required           | +----------+---------------------------+--------------------------------------------+----------------------+------------------------+
+
+
+Clientside
+^^^^^^^^^^
+
+any modern browser SHOULD work.
+
+
+.. improtant:: this chapter needs more details
