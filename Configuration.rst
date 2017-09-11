@@ -1,6 +1,6 @@
-=============
-Installation
-=============
+=====
+Setup
+=====
 
 .. contents:: `In this article:`
     :depth: 2
