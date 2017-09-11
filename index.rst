@@ -18,6 +18,7 @@ Contents:
    Requirements
    Installation
    Configuration
+   config
    Manual/index
    Changelog
    Support
