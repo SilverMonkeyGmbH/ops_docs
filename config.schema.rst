@@ -6,7 +6,7 @@ Config schema
 This document describes the schema of the config.json file. The config.json file is used to configure the available views and actions for the web-app.
 
 
-Root object schema
+Root object
 ==================
 .. csv-table::
    :header: "Name","Type","Description","Required"
@@ -21,7 +21,7 @@ Root object schema
 
 
 
-SiteConfig schema
+SiteConfig
 ======================
 .. csv-table::
    :header: "Name","Type","Description","Required"
@@ -33,7 +33,7 @@ SiteConfig schema
 	"RoleNames","","A Site can be shown to only authorized users, which can be described here",""
 
 
-RoleNames schema
+RoleNames
 ======================
 .. csv-table::
    :header: "Name","Type","Description","Required"
@@ -42,7 +42,7 @@ RoleNames schema
 	"Values","array<>","",""
 
 
-PanelConfig schema
+PanelConfig
 ======================
 .. csv-table::
    :header: "Name","Type","Description","Required"
@@ -57,7 +57,7 @@ PanelConfig schema
 	"DefaultCondition","null","",""
 
 
-Column schema
+Column
 ======================
 .. csv-table::
    :header: "Name","Type","Description","Required"
@@ -67,7 +67,7 @@ Column schema
 	"DisplayName","string","The label that should be displayed in the UI","required"
 
 
-FilterConfig schema
+FilterConfig
 ======================
 .. csv-table::
    :header: "Name","Type","Description","Required"
@@ -80,7 +80,7 @@ FilterConfig schema
 	"Condition","null","An SQL condition that is used as part of a where clause when querying the database table",""
 
 
-ContextMenu schema
+ContextMenu
 ======================
 .. csv-table::
    :header: "Name","Type","Description","Required"
@@ -90,7 +90,7 @@ ContextMenu schema
 	"MenuId","integer","The id of the corresponding Menu","required"
 
 
-DnDMenu schema
+DnDMenu
 ======================
 .. csv-table::
    :header: "Name","Type","Description","Required"
@@ -100,7 +100,7 @@ DnDMenu schema
 	"MenuId","integer","The id of the corresponding Menu","required"
 
 
-Menu schema
+Menu
 ======================
 .. csv-table::
    :header: "Name","Type","Description","Required"
@@ -111,7 +111,7 @@ Menu schema
 	"MenuItems","array<MenuItem>","A list of actions that are bound to this menu","required"
 
 
-MenuItem schema
+MenuItem
 ======================
 .. csv-table::
    :header: "Name","Type","Description","Required"
