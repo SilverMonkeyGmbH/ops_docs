@@ -86,8 +86,7 @@ RoleId   FK Role(Id), uniqueidentifier, not null
 ItemId   FK **Item**(Id), uniqueidentifier, not null
 ======== ===========================================
 
-..note:: database conventions
-
+.. note:: database conventions
     SIM (usually) uses 
     - singular for table names (for example "Application" instead of "Applications")
     - "Id" as the name for the PRIMARY KEY
