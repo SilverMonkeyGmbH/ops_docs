@@ -87,13 +87,10 @@ ItemId   FK **Item**(Id), uniqueidentifier, not null
 ======== ===========================================
 
 .. note:: database conventions
-    SIM (usually) uses 
-    - singular for table names (for example "Application" instead of "Applications")
-    - "Id" as the name for the PRIMARY KEY
-    - The GUID/uniqueidentifier type for the PRIMARY KEY column
-    - The names of the involved tables seperated by an underscore in a many to many relationship (for example "Computer_Role")
-    - Tablename + "Id" for FOREIGN KEYS (for example "RoleId")
-
-
-
-
+   SIM (usually) uses
+    
+   - singular for table names (for example "Application" instead of "Applications")
+   - "Id" as the name for the PRIMARY KEY
+   - The GUID/uniqueidentifier type for the PRIMARY KEY column
+   - The names of the involved tables seperated by an underscore in a many to many relationship (for example "Computer_Role")
+   - Tablename + "Id" for FOREIGN KEYS (for example "RoleId")
