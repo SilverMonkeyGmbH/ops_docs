@@ -23,7 +23,7 @@ Contents:
    Introduction
    Requirements
    Installation
-   Setup
+   DatabaseSetup
    config.schema
    config.json
    Manual/index

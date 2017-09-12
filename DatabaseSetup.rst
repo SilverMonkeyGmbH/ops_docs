@@ -1,6 +1,6 @@
-=====
-Setup
-=====
+==============
+Database Setup
+==============
 
 .. contents:: `In this article:`
     :depth: 2
@@ -40,10 +40,9 @@ example Web.config
     </configuration>
     <!--ProjectGuid: b03c2d11-e5ac-4242-a5c2-862a3787e00a-->
 
-Database
-^^^^^^^^
 
-The module expects a Table named "Role_Group" with columns "RoleId" (uniqueidentifier, not null) and "GroupName" (varchar, not null) in the given database. The Groupname is the name of a windows domain group. The RoleId is the id of a SIM/OPS role. The corresponding Role table is not used by the auth module and therefore CAN be absent.
+
+The auth module expects a Table named "Role_Group" with columns "RoleId" (uniqueidentifier, not null) and "GroupName" (varchar, not null) in the given database. The Groupname is the name of a windows domain group. The RoleId is the id of a SIM/OPS role. The corresponding Role table is not used by the auth module and therefore CAN be absent.
 
 
 -------
@@ -51,10 +50,9 @@ ops-api
 -------
 
 
-Database
-^^^^^^^^
 
-The module expects following tables and relationships:
+
+The ops-api module expects following tables and relationships:
 
 
 **Role** table:
