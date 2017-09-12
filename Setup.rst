@@ -17,27 +17,28 @@ Under the node appSettings the value of "DomainName" MUST have the name of the w
 example Web.config
 
 .. code-block:: xml
-<?xml version="1.0" encoding="utf-8"?>
-<configuration>
-    <appSettings>
-        <add key="DomainName" value="phatconsulting.group" />
-    </appSettings>
-    <connectionStrings>
-        <add name="DefaultConnectionString" connectionString="data source=simsrv042;initial catalog=SIM_OPS_R042;integrated security=True;MultipleActiveResultSets=True;" providerName="System.Data.EntityClient" />
-    </connectionStrings>
-    <system.web>
-        <authentication mode="Windows" />
-        <compilation targetFramework="4.6.1">
-        <assemblies>
-            <add assembly="System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A" />
-            <add assembly="System.DirectoryServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A" />
-            <add assembly="System.DirectoryServices.AccountManagement, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />
-        </assemblies>
-        </compilation>
-        <httpRuntime targetFramework="4.5.2" />
-    </system.web>
-</configuration>
-<!--ProjectGuid: b03c2d11-e5ac-4242-a5c2-862a3787e00a-->
+
+    <?xml version="1.0" encoding="utf-8"?>
+    <configuration>
+        <appSettings>
+            <add key="DomainName" value="phatconsulting.group" />
+        </appSettings>
+        <connectionStrings>
+            <add name="DefaultConnectionString" connectionString="data source=simsrv042;initial catalog=SIM_OPS_R042;integrated security=True;MultipleActiveResultSets=True;" providerName="System.Data.EntityClient" />
+        </connectionStrings>
+        <system.web>
+            <authentication mode="Windows" />
+            <compilation targetFramework="4.6.1">
+            <assemblies>
+                <add assembly="System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A" />
+                <add assembly="System.DirectoryServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A" />
+                <add assembly="System.DirectoryServices.AccountManagement, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />
+            </assemblies>
+            </compilation>
+            <httpRuntime targetFramework="4.5.2" />
+        </system.web>
+    </configuration>
+    <!--ProjectGuid: b03c2d11-e5ac-4242-a5c2-862a3787e00a-->
 
 Database
 ^^^^^^^^
