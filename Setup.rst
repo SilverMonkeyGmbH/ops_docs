@@ -73,8 +73,6 @@ Column   Type
 ======== ===============================
 Id       PK, uniqueidentifier, not null
 ItemType varchar(15), not null
-*+additional domain relevant columns*
-----------------------------------------
 ======== ===============================
 
 

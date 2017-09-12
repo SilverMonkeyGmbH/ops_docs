@@ -1,5 +1,13 @@
-Root object definition
-======================
+=============
+Config schema
+=============
+
+
+This document describes the schema of the config.json file. The config.json file is used to configure the available views and actions for the web-app.
+
+
+Root object schema
+==================
 .. csv-table::
    :header: "Name","Type","Description","Required"
    :widths: 10,10,10,10
@@ -13,19 +21,19 @@ Root object definition
 
 
 
-SiteConfig object definition
+SiteConfig schema
 ======================
 .. csv-table::
    :header: "Name","Type","Description","Required"
    :widths: 10,10,10,10
 
 	"Id","integer","","required"
-	"DisplayName","string","","required"
-	"PanelIds","array<>","","required"
-	"RoleNames","","",""
+	"DisplayName","string","The name that will be displayed to users","required"
+	"PanelIds","array<integer>","A Site can display several Panels that are specified here","required"
+	"RoleNames","","A Site can be shown to only authorized users, which can be described here",""
 
 
-RoleNames object definition
+RoleNames schema
 ======================
 .. csv-table::
    :header: "Name","Type","Description","Required"
@@ -34,7 +42,7 @@ RoleNames object definition
 	"Values","array<>","",""
 
 
-PanelConfig object definition
+PanelConfig schema
 ======================
 .. csv-table::
    :header: "Name","Type","Description","Required"
@@ -43,13 +51,13 @@ PanelConfig object definition
 	"Id","integer","","required"
 	"SearchField","string","","required"
 	"Columns","array<Column>","","required"
-	"FilterIds","array<>","","required"
+	"FilterIds","array<integer>","","required"
 	"Table","string","","required"
 	"PermissionTable","string","","required"
 	"DefaultCondition","null","",""
 
 
-Column object definition
+Column schema
 ======================
 .. csv-table::
    :header: "Name","Type","Description","Required"
@@ -59,7 +67,7 @@ Column object definition
 	"DisplayName","string","The label that should be displayed in the UI","required"
 
 
-FilterConfig object definition
+FilterConfig schema
 ======================
 .. csv-table::
    :header: "Name","Type","Description","Required"
@@ -72,7 +80,7 @@ FilterConfig object definition
 	"Condition","null","An SQL condition that is used as part of a where clause when querying the database table",""
 
 
-ContextMenu object definition
+ContextMenu schema
 ======================
 .. csv-table::
    :header: "Name","Type","Description","Required"
@@ -82,7 +90,7 @@ ContextMenu object definition
 	"MenuId","integer","The id of the corresponding Menu","required"
 
 
-DnDMenu object definition
+DnDMenu schema
 ======================
 .. csv-table::
    :header: "Name","Type","Description","Required"
@@ -92,7 +100,7 @@ DnDMenu object definition
 	"MenuId","integer","The id of the corresponding Menu","required"
 
 
-Menu object definition
+Menu schema
 ======================
 .. csv-table::
    :header: "Name","Type","Description","Required"
@@ -103,7 +111,7 @@ Menu object definition
 	"MenuItems","array<MenuItem>","A list of actions that are bound to this menu","required"
 
 
-MenuItem object definition
+MenuItem schema
 ======================
 .. csv-table::
    :header: "Name","Type","Description","Required"
