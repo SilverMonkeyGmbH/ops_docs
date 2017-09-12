@@ -18,9 +18,9 @@ The module needs to be installed as an IIS application for a website. The websit
 | Applicationname                         | auth                                            |
 +-----------------------------------------+-------------------------------------------------+
 | Applicationpool | .NET CLR Version      | v4.0.30319                                      |
-|                 +-----------------------+-------------------------------------------------+
+|-----------------+-----------------------+-------------------------------------------------+
 | Applicationpool | Managed pipeline mode | Integrated                                      |
-|                 +-----------------------+-------------------------------------------------+
+|-----------------+-----------------------+-------------------------------------------------+
 | Applicationpool | Identity              | Custom account with read access to the database |
 +-----------------+-----------------------+-------------------------------------------------+
 | Authentication                          | Only anonymous authentication enabled           |
