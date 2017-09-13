@@ -21,7 +21,7 @@ Deployment machine
 OPS Config file (config.json)
 =============================
 
-C:\SilverMonkey\OPS\Web\ops-api\config.json
+C:\\SilverMonkey\\OPS\Web\\ops-api\\config.json
 
 OPS Web URL (within domain)
 ===========================
@@ -31,4 +31,4 @@ https://degutpvwcscm04.bert.group/ops-web/
 Custom CSS styles 
 =================
 
-C:\SilverMonkey\OPS\Web\ops-web\index.css
+C:\\SilverMonkey\\OPS\Web\\ops-web\\index.css
