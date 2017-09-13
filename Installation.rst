@@ -53,11 +53,11 @@ IIS Modules
 The AspNetCoreModule module needs to be activated for this application.
 
 
---------------------
-ops-webapp / ops-web
---------------------
+-------
+ops-web
+-------
 
-The ops-webapp can be hosted in any webserver.
+The ops-web can be hosted in any webserver.
 If it is hosted in IIS the following settings apply:
 
 +---------------------------------------+-----------------------------------------------+
