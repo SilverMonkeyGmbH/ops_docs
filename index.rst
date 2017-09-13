@@ -26,6 +26,7 @@ Contents:
    DatabaseSetup
    config.schema
    config.json
-   Manual/index
+   Environments
+   Manual/index   
    Changelog
    Support
