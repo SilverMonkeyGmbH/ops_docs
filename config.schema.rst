@@ -39,7 +39,7 @@ RoleNames
    :header: "Name","Type","Description","Required"
    :widths: 10,10,10,10
 
-	"Values","array<string>","The actual values. Roles can end with a wildcard, to match more than one role at once. The symbol * (asterisk) is used. Example: Admin* would match any role that begins with **Admin**, so Admin, AdminHamburg and AdminBerlin would match the rule. GlobalAdmin however would not match.",""
+	"Values","null","The actual values. Roles can end with a wildcard, to match more than one role at once. The symbol * (asterisk) is used. Example: Admin* would match any role that begins with **Admin**, so Admin, AdminHamburg and AdminBerlin would match the rule. GlobalAdmin however would not match.",""
 
 
 PanelConfig
@@ -54,7 +54,7 @@ PanelConfig
 	"FilterIds","array<integer>","Specifies the available Filters","required"
 	"Table","string","The name of the table to display","required"
 	"PermissionTable","string","The many-to-many intermediate table between the table specified in the Table property and the Role table","required"
-	"DefaultCondition","string","A sql expression to filter the items","required"
+	"DefaultCondition","string","A sql expression to filter the items",""
 
 
 Column
@@ -77,7 +77,7 @@ FilterConfig
 	"DisplayName","string","The name that will be displayed in the UI","required"
 	"ActionsMenuId","integer","Every filter is bound to a specific ActionMenu","required"
 	"RoleNames","RoleNames","A filter can be made available to specific roles. If this property is not set, the filter will be available for all users",""
-	"Condition","null","An SQL condition that is used as part of a where clause when querying the database table",""
+	"Condition","string","An SQL condition that is used as part of a where clause when querying the database table",""
 
 
 ContextMenu
