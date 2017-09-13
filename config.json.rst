@@ -3,7 +3,6 @@ config.json sample file
 =======================
 
 .. code-block:: json
-
     {
       "sites": [
         {

@@ -118,7 +118,13 @@ MenuItem
    :widths: 10,10,10,10
 
 	"DisplayName","string","Will be used in the UI","required"
-	"UrlTemplate","string","UrlTemplate is used to create a url at runtime with specified parameters. ++ explanation of parameters ++","required"
+	"UrlTemplate","string","UrlTemplate is used to create a url at runtime with specified parameters from items.
+Parameters are extracted from the items contextual to the menu. They should have this format:
+
+    "{[itemType].[column]}"
+
+where "itemType" is the mandatory item type that all items should have as a property.
+Example: "https://v6.com/install?idapp={app.id}&idcomp={computer.id}".","required"
 	"RoleNames","","A MenuItem can be restricted to users that belong to certain Roles",""
 
 
