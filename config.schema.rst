@@ -30,7 +30,7 @@ SiteConfig
 	"Id","integer","","required"
 	"DisplayName","string","The name that will be displayed to users","required"
 	"PanelIds","array<integer>","A Site can display several Panels that are specified here","required"
-	"RoleNames","no type","A Site can be shown to only authorized users, which can be described here",""
+	"RoleNames","oneof","A Site can be shown to only authorized users, which can be described here",""
 
 
 RoleNames
@@ -76,7 +76,7 @@ FilterConfig
 	"Id","integer","Id must be unique among all filters","required"
 	"DisplayName","string","The name that will be displayed in the UI","required"
 	"ActionsMenuId","integer","Every filter is bound to a specific ActionMenu","required"
-	"RoleNames","no type","A filter can be made available to specific roles. If this property is not set, the filter will be available for all users",""
+	"RoleNames","oneof","A filter can be made available to specific roles. If this property is not set, the filter will be available for all users",""
 	"Condition","null","An SQL condition that is used as part of a where clause when querying the database table",""
 
 
@@ -119,6 +119,6 @@ MenuItem
 
 	"DisplayName","string","Will be used in the UI","required"
 	"UrlTemplate","string","UrlTemplate is used to create a url at runtime with specified parameters from items. Parameters are extracted from the items contextual to the menu. They should have this format: **{[itemType].[column]}** where **itemType** is the mandatory item type that all items should have as a property. Example: **https://v6.com/install?idapp={app.id}&idcomp={computer.id}**.","required"
-	"RoleNames","no type","A MenuItem can be restricted to users that belong to certain Roles",""
+	"RoleNames","oneof","A MenuItem can be restricted to users that belong to certain Roles",""
 
 
