@@ -51,7 +51,7 @@ PanelConfig
 	"Id","integer","The id property","required"
 	"SearchField","string","The property name (usually the name of the column) that should be used for searching","required"
 	"Columns","array<Column>","The columns that should be displayed in the table.
-Don't forget that every item should have the properties "id" and "itemType" even if they are not displayed.","required"
+Don't forget that every item should have the properties **id** and **itemType** even if they are not displayed.","required"
 	"FilterIds","array<integer>","Specifies the available Filters","required"
 	"Table","string","The name of the table to display","required"
 	"PermissionTable","string","The many-to-many intermediate table between the table specified in the Table property and the Role table","required"
@@ -119,11 +119,7 @@ MenuItem
    :widths: 10,10,10,10
 
 	"DisplayName","string","Will be used in the UI","required"
-	"UrlTemplate","string","UrlTemplate is used to create a url at runtime with specified parameters from items.
-Parameters are extracted from the items contextual to the menu. They should have this format:
-    **{[itemType].[column]}**
-where **itemType** is the mandatory item type that all items should have as a property.
-Example: **https://v6.com/install?idapp={app.id}&idcomp={computer.id}**.","required"
+	"UrlTemplate","string","UrlTemplate is used to create a url at runtime with specified parameters from items. Parameters are extracted from the items contextual to the menu. They should have this format: **{[itemType].[column]}** where **itemType** is the mandatory item type that all items should have as a property. Example: **https://v6.com/install?idapp={app.id}&idcomp={computer.id}**.","required"
 	"RoleNames","","A MenuItem can be restricted to users that belong to certain Roles",""
 
 
