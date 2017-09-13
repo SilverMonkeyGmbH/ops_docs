@@ -48,13 +48,14 @@ PanelConfig
    :header: "Name","Type","Description","Required"
    :widths: 10,10,10,10
 
-	"Id","integer","","required"
-	"SearchField","string","","required"
-	"Columns","array<Column>","","required"
-	"FilterIds","array<integer>","","required"
-	"Table","string","","required"
-	"PermissionTable","string","","required"
-	"DefaultCondition","null","",""
+	"Id","integer","The id property","required"
+	"SearchField","string","The property name (usually the name of the column) that should be used for searching","required"
+	"Columns","array<Column>","The columns that should be displayed in the table.
+Don't forget that every item should have the properties "id" and "itemType" even if they are not displayed.","required"
+	"FilterIds","array<integer>","Specifies the available Filters","required"
+	"Table","string","The name of the table to display","required"
+	"PermissionTable","string","The many-to-many intermediate table between the table specified in the Table property and the Role table","required"
+	"DefaultCondition","null","A sql expression to filter the items",""
 
 
 Column
