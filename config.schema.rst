@@ -39,7 +39,7 @@ RoleNames
    :header: "Name","Type","Description","Required"
    :widths: 10,10,10,10
 
-	"Values","null","The actual values. Roles can end with a wildcard, to match more than one role at once. The symbol * (asterisk) is used. Example: Admin* would match any role that begins with **Admin**, so Admin, AdminHamburg and AdminBerlin would match the rule. GlobalAdmin however would not match.",""
+	"Values","array<string>","The actual values. Roles can end with a wildcard, to match more than one role at once. The symbol * (asterisk) is used. Example: Admin* would match any role that begins with **Admin**, so Admin, AdminHamburg and AdminBerlin would match the rule. GlobalAdmin however would not match.","required"
 
 
 PanelConfig
