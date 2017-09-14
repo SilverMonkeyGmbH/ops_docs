@@ -10,7 +10,7 @@ Root object
 ==================
 .. csv-table::
    :header: "Name","Type","Description","Required"
-   :widths: 10,10,10,10
+   :widths: 10,10,70,10
 
 	"Sites","array<SiteConfig>","A list of Sites","required"
 	"Panels","array<PanelConfig>","A list of Panels","required"
@@ -25,7 +25,7 @@ SiteConfig
 ======================
 .. csv-table::
    :header: "Name","Type","Description","Required"
-   :widths: 10,10,10,10
+   :widths: 10,10,70,10
 
 	"Id","integer","","required"
 	"DisplayName","string","The name that will be displayed to users","required"
@@ -37,7 +37,7 @@ RoleNames
 ======================
 .. csv-table::
    :header: "Name","Type","Description","Required"
-   :widths: 10,10,10,10
+   :widths: 10,10,70,10
 
 	"Values","array<string>","The actual values. Roles can end with a wildcard, to match more than one role at once. The symbol * (asterisk) is used. Example: Admin* would match any role that begins with **Admin**, so Admin, AdminHamburg and AdminBerlin would match the rule. GlobalAdmin however would not match.","required"
 
@@ -46,7 +46,7 @@ PanelConfig
 ======================
 .. csv-table::
    :header: "Name","Type","Description","Required"
-   :widths: 10,10,10,10
+   :widths: 10,10,70,10
 
 	"Id","integer","The id property","required"
 	"SearchField","string","The property name (usually the name of the column) that should be used for searching","required"
@@ -61,7 +61,7 @@ Column
 ======================
 .. csv-table::
    :header: "Name","Type","Description","Required"
-   :widths: 10,10,10,10
+   :widths: 10,10,70,10
 
 	"FieldName","string","The name of the property (usually a database column)","required"
 	"DisplayName","string","The label that should be displayed in the UI","required"
@@ -71,7 +71,7 @@ FilterConfig
 ======================
 .. csv-table::
    :header: "Name","Type","Description","Required"
-   :widths: 10,10,10,10
+   :widths: 10,10,70,10
 
 	"Id","integer","Id must be unique among all filters","required"
 	"DisplayName","string","The name that will be displayed in the UI","required"
@@ -84,7 +84,7 @@ ContextMenu
 ======================
 .. csv-table::
    :header: "Name","Type","Description","Required"
-   :widths: 10,10,10,10
+   :widths: 10,10,70,10
 
 	"ItemType","string","TODO","required"
 	"MenuId","integer","The id of the corresponding Menu","required"
@@ -94,7 +94,7 @@ DnDMenu
 ======================
 .. csv-table::
    :header: "Name","Type","Description","Required"
-   :widths: 10,10,10,10
+   :widths: 10,10,70,10
 
 	"ItemTypes","array<string>","A combination (a list) of itemtypes, for which this Drag-and-Drop-Menu will be available","required"
 	"MenuId","integer","The id of the corresponding Menu","required"
@@ -104,7 +104,7 @@ Menu
 ======================
 .. csv-table::
    :header: "Name","Type","Description","Required"
-   :widths: 10,10,10,10
+   :widths: 10,10,70,10
 
 	"Id","integer","","required"
 	"Name","string","","required"
@@ -115,7 +115,7 @@ MenuItem
 ======================
 .. csv-table::
    :header: "Name","Type","Description","Required"
-   :widths: 10,10,10,10
+   :widths: 10,10,70,10
 
 	"DisplayName","string","Will be used in the UI","required"
 	"UrlTemplate","string","UrlTemplate is used to create a url at runtime with specified parameters from items. Parameters are extracted from the items contextual to the menu. They should have this format: **{[itemType].[column]}** where **itemType** is the mandatory item type that all items should have as a property. Example: **https://v6.com/install?idapp={app.id}&idcomp={computer.id}**.","required"
